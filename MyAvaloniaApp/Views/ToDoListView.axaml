@@ -1,0 +1,51 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:MyAvaloniaApp.ViewModels"
+			 mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
+			 x:DataType="vm:ToDoListViewModel"
+             x:Class="MyAvaloniaApp.Views.ToDoListView">
+	<DockPanel Background="Gray">
+		<Button DockPanel.Dock="Bottom"
+						HorizontalAlignment="Left"
+						Margin="4"
+						HorizontalContentAlignment="Center"
+						Width="100"
+						Background="#7d62c7"
+						Foreground="White"
+						x:CompileBindings="False"
+						Command="{Binding $parent[Window].DataContext.AddItem}"
+						>Add Item</Button>
+		<ItemsControl ItemsSource="{Binding ListItems}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto" />
+							<!-- Para o CheckBox -->
+							<ColumnDefinition Width="Auto" />
+							<!-- Espaço entre o CheckBox e o ícone da lixeira -->
+							<ColumnDefinition Width="Auto" />
+							<!-- Para o ícone da lixeira -->
+						</Grid.ColumnDefinitions>
+						<CheckBox Margin="4"
+								  IsChecked="{Binding IsChecked}"
+								  Content="{Binding Description}"
+								  Grid.Column="0">
+							<CheckBox.Styles>
+								<Styles>
+									<Style Selector="CheckBox">
+										<Setter Property="Foreground" Value="#7d62c7" />
+										<Setter Property="BorderBrush" Value="#7d62c7" />
+									</Style>
+								</Styles>
+							</CheckBox.Styles>
+						</CheckBox>
+						<Image Source="avares://MyAvaloniaApp/Assets/trash-can.png" Width="20" Height="20" DockPanel.Dock="Left" Margin="180,0,0,0"/>
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</DockPanel>
+</UserControl>
