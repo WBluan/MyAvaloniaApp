@@ -134,3 +134,4 @@ C:\Users\Due Laser - Luan\Documents\UWP\MyAvaloniaApp\MyAvaloniaApp\obj\Debug\ne
 C:\Users\Due Laser - Luan\Documents\UWP\MyAvaloniaApp\MyAvaloniaApp\obj\Debug\net8.0\MyAvaloniaApp.csproj.CopyComplete
 C:\Users\Due Laser - Luan\Documents\UWP\MyAvaloniaApp\MyAvaloniaApp\obj\Debug\net8.0\MyAvaloniaApp.genruntimeconfig.cache
 C:\Users\Due Laser - Luan\Documents\UWP\MyAvaloniaApp\MyAvaloniaApp\obj\Debug\net8.0\ref\MyAvaloniaApp.dll
+C:\Users\Due Laser - Luan\Documents\UWP\MyAvaloniaApp\MyAvaloniaApp\obj\Debug\net8.0\MyAvaloniaApp.sourcelink.json
